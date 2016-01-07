@@ -21,14 +21,14 @@ def SendMail(ImgFileName,To,name):
     msg.attach(image)
     s = smtplib.SMTP('smtp.gmail.com:587')
     s.starttls()
-    s.login("lokibg2@gmail.com", "Appoyy1!")
+    s.login("lokibg2@gmail.com", "****")
     s.sendmail(From, To, msg.as_string())
     s.quit()
 
 
 font = ImageFont.truetype("/usr/share/fonts/dejavu/DejaVuSans.ttf",90)
 
-db = MySQLdb.connect("localhost","loki","appoyy","coe" )
+db = MySQLdb.connect("localhost","loki","******","coe" )
 cursor = db.cursor()
 sql = "SELECT * FROM stud"
 cursor.execute(sql)
